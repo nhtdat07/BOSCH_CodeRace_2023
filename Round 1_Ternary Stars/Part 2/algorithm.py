@@ -4,9 +4,9 @@ import math
 # Get K0
 def getK0(key):
     length = math.floor(len(key)*0.5)
-    if(length == 64):
+    if (length == 64):
         return key
-    if(length > 64):
+    if (length > 64):
         hash = sha256(bytes.fromhex(key))
         key = hash.hexdigest()
         for i in range(32):
